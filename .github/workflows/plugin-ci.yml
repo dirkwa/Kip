@@ -2,7 +2,7 @@ name: Plugin CI
 
 on:
   push:
-    branches: [master, test-plugin-ci]
+    branches: [master, test-plugin-ci, test-plugin-ci-2]
   pull_request:
     branches: [master]
 
