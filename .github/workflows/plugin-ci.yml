@@ -1,0 +1,17 @@
+name: Plugin CI
+
+on:
+  push:
+    branches: [master, test-plugin-ci]
+  pull_request:
+    branches: [master]
+
+jobs:
+  plugin-ci:
+    uses: dirkwa/signalk-server/.github/workflows/plugin-ci.yml@feat-ci-for-plugins
+    with:
+      node-versions: '["20", "22"]'
+      build-command: npm run build:plugin
+      test-command: npm run test:plugin
+      enable-armv7: false
+      enable-signalk-integration: false
