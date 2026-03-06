@@ -10,8 +10,5 @@ jobs:
   plugin-ci:
     uses: dirkwa/signalk-server/.github/workflows/plugin-ci.yml@feat-ci-for-plugins
     with:
-      node-versions: '["22", "24"]'
       build-command: npm run build:plugin
       test-command: npm run test:plugin
-      enable-armv7: true
-      enable-signalk-integration: false
